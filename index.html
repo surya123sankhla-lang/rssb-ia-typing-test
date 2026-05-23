@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>RSSB IA Typing Test Practice 2026 - Rajasthan Informatics Assistant Typing</title>
+
+<meta name="description" content="RSSB IA Typing Test Practice with Rajasthan exam style interface. Practice Informatics Assistant Hindi-English typing speed, accuracy and real exam environment.">
+
+<meta name="keywords" content="RSSB IA typing test, Rajasthan Informatics Assistant typing practice, RSSB typing speed test, Rajasthan IA typing test, Hindi typing test">
+
+<meta name="google-site-verification" content="tW8cRSIvyoCElL6zoJE9PeLCSVrz981avVInEs7axNo">
+
+<link rel="icon" href="https://res.cloudinary.com/dvnjhbz54/image/upload/v1771531264/favicon_nuw3of.ico">
+
+<link rel="canonical" href="https://surya123sankhla-lang.github.io/rssb-ia-typing-test/">
+
+<meta property="og:title" content="RSSB IA Typing Test Practice">
+<meta property="og:description" content="Practice RSSB Informatics Assistant typing test with timer, WPM, accuracy and instant result.">
+<meta property="og:url" content="https://surya123sankhla-lang.github.io/rssb-ia-typing-test/">
+<meta property="og:type" content="website">
+
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#e9eef2;color:#111}
+.header{background:#f7f7f7;border-bottom:3px solid #2b7dbc;padding:14px 22px;display:flex;justify-content:space-between;align-items:center}
+.brand{display:flex;gap:10px;align-items:center}
+.brand img{width:50px;height:50px;border-radius:7px}
+.brand b{font-size:28px;color:#063b66}
+.timer{font-size:20px;color:#1268b3;font-weight:bold}
+.cta{background:#fff4d6;text-align:center;padding:10px;border-bottom:1px solid #e0b84f}
+.wrap{padding:12px}
+.panel{background:#fff;border:1px solid #9eb3c4}
+.panel-title{background:#1f6cad;color:white;padding:9px 12px;font-weight:bold}
+.grid{display:grid;grid-template-columns:1fr 280px;gap:14px;padding:12px}
+#passage{height:170px;border:1px solid #aaa;padding:12px;font-size:17px;line-height:1.6;overflow:auto}
+#typingBox{width:100%;height:170px;margin-top:8px;padding:12px;font-size:17px}
+.note{border:1px solid #ccc;padding:12px;font-size:13px;line-height:1.6}
+button{background:#35a9d6;color:white;border:0;padding:10px 20px;font-weight:bold;margin-top:14px;cursor:pointer}
+button:hover{background:#168dbb}
+.seo{background:white;margin-top:14px;border:1px solid #ccc;padding:18px;line-height:1.7}
+.seo h1{font-size:26px;color:#063b66}
+.seo h2{font-size:21px;color:#0a5ea8;margin-top:22px}
+.footer{background:#4a666f;color:white;text-align:center;padding:10px;font-size:12px;margin-top:10px}
+#resultScreen{display:none;padding:30px}
+.card{max-width:760px;margin:30px auto;background:white;border:1px solid #b9c5ce}
+.cardHead{background:#063b66;color:white;text-align:center;padding:22px}
+.resultGrid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;padding:25px}
+.item{background:#f8fbff;border:1px solid #d0d7de;text-align:center;padding:16px}
+.item b{display:block;font-size:30px;color:#1268b3;margin-top:5px}
+.visit{display:block;width:max-content;margin:0 auto 25px;background:#063b66;color:white;text-decoration:none;padding:12px 25px}
+.related ul{padding-left:20px}
+@media(max-width:760px){
+.grid,.resultGrid{grid-template-columns:1fr}
+.header{flex-direction:column;gap:10px}
+}
+</style>
+</head>
+
+<body>
+
+<div id="testScreen">
+
+<div class="header">
+<div class="brand">
+<img src="https://res.cloudinary.com/dvnjhbz54/image/upload/v1771509631/photo_6102735051574414807_y_ngjmnz.jpg" alt="TypingNexus Logo">
+<b>TypingNexus</b>
+</div>
+
+<div>
+Time Left:
+<span class="timer" id="timer">05:00</span>
+</div>
+</div>
+
+<div class="cta">
+<b>Official Mock Test Practice:</b>
+RSSB IA ka full mock dene ke liye
+<a href="https://typingnexus.in" target="_blank">TypingNexus.in par visit karein</a>
+</div>
+
+<div class="wrap">
+
+<div style="background:white;padding:10px;border:1px solid #ccc;margin-bottom:10px">
+Test Duration:
+
+<select id="duration" onchange="changeDuration()">
+<option value="120">2 Minutes</option>
+<option value="300" selected>5 Minutes</option>
+<option value="420">7 Minutes</option>
+</select>
+
+<b style="float:right">RSSB Informatics Assistant Typing Test</b>
+</div>
+
+<div class="panel">
+
+<div class="panel-title">
+Keyboard Typing QWERTY
+</div>
+
+<div class="grid">
+
+<div>
+
+<div id="passage"></div>
+
+<textarea id="typingBox" placeholder="Type the above text here..." oninput="startTest()"></textarea>
+
+</div>
+
+<div>
+
+<div class="note">
+RSSB Informatics Assistant typing test me speed aur accuracy dono important hote hain. Rajasthan government typing exams me regular practice candidates ki performance improve karti hai.
+</div>
+
+<button onclick="submitTest()">Submit</button>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="seo">
+
+<h1>RSSB IA Typing Test Practice 2026</h1>
+
+<p>
+RSSB Informatics Assistant Typing Test Practice tool specially Rajasthan Staff Selection Board IA examination candidates ke liye design kiya gaya hai. Ye typing platform candidates ko real typing environment provide karta hai jahan typing speed, accuracy aur exam confidence improve hota hai.
+</p>
+
+<p>
+RSSB IA typing examination me candidates ko Hindi aur English typing dono par focus karna hota hai. Daily paragraph typing aur timer based practice typing consistency improve karti hai aur mistakes reduce karti hai.
+</p>
+
+<h2>RSSB IA Official Typing Rules</h2>
+
+<ul>
+<li>English Typing Speed: 30 WPM</li>
+<li>Hindi Typing Speed: 25 WPM</li>
+<li>Typing Languages: Hindi & English</li>
+<li>Backspace Allowed</li>
+<li>Recommended Accuracy: 90%+</li>
+<li>Practice Modes: 2, 5 and 7 Minutes</li>
+</ul>
+
+<h2>Why RSSB IA Typing Practice is Important</h2>
+
+<p>
+Rajasthan Informatics Assistant recruitment me typing speed aur typing accuracy selection process ka important part hota hai. Candidates ko typing pressure ke andar bhi mistakes control karni hoti hain aur proper typing rhythm maintain rakhna hota hai.
+</p>
+
+<h2>Frequently Asked Questions</h2>
+
+<p><b>What is the typing speed for RSSB IA?</b><br>
+English typing ke liye 30 WPM aur Hindi typing ke liye 25 WPM commonly required hoti hai.</p>
+
+<p><b>Can I practice Hindi typing for RSSB IA?</b><br>
+Haan, RSSB IA preparation ke liye Hindi aur English dono typing practice important hai.</p>
+
+<p><b>How to improve typing accuracy?</b><br>
+Daily paragraph typing, proper finger placement aur regular mock tests accuracy improve karte hain.</p>
+
+<div class="related">
+<h2>Related Typing Tests</h2>
+
+<ul>
+<li>RSSB LDC Typing Test</li>
+<li>SSC CHSL Typing Test</li>
+<li>UPPSC RO ARO Typing Test</li>
+<li>Bihar Beltron DEO Typing Test</li>
+</ul>
+</div>
+
+<p>
+Official mock typing test practice aur all India ranking ke liye
+<a href="https://typingnexus.in" target="_blank">TypingNexus.in</a>
+visit karein.
+</p>
+
+</div>
+
+<div class="footer">
+© <span id="yearBox"></span> TypingNexus.in | RSSB IA Typing Test Practice
+</div>
+
+</div>
+
+</div>
+
+<div id="resultScreen">
+
+<div class="card">
+
+<div class="cardHead">
+<h1>RSSB IA Typing Test Result</h1>
+<p>TypingNexus Performance Report</p>
+</div>
+
+<div class="resultGrid">
+
+<div class="item">
+Gross Speed
+<b id="grossWpm">0 WPM</b>
+</div>
+
+<div class="item">
+Net Speed
+<b id="netWpm">0 WPM</b>
+</div>
+
+<div class="item">
+Accuracy
+<b id="accuracy">0%</b>
+</div>
+
+<div class="item">
+Errors
+<b id="errors">0</b>
+</div>
+
+<div class="item">
+Typed Words
+<b id="words">0</b>
+</div>
+
+<div class="item">
+Time Used
+<b id="timeUsed">0 Min</b>
+</div>
+
+</div>
+
+<a class="visit" href="https://typingnexus.in" target="_blank">
+Visit Website
+</a>
+
+</div>
+
+</div>
+
+<script>
+
+document.getElementById("yearBox").innerText = new Date().getFullYear();
+
+const paragraph2 = "RSSB Informatics Assistant typing practice improves typing speed accuracy and confidence for Rajasthan government recruitment preparation.";
+
+const paragraph5 = "RSSB Informatics Assistant typing practice is useful for candidates preparing for Rajasthan government recruitment examinations. Regular typing practice helps improve speed accuracy concentration and typing confidence. This typing test provides an exam style interface where candidates can practice with timer speed calculation and instant result analysis.";
+
+const paragraph7 = "RSSB Informatics Assistant typing test practice is an important part of preparation for candidates applying for Informatics Assistant posts in Rajasthan government departments. Candidates should practice daily to improve typing speed typing accuracy and typing consistency. This typing platform provides timer based typing practice with gross speed net speed accuracy and error analysis. Regular typing practice improves finger movement typing rhythm and confidence during real exam conditions.";
+
+const passageBox = document.getElementById("passage");
+const typingBox = document.getElementById("typingBox");
+const timerBox = document.getElementById("timer");
+
+let totalTime = 300;
+let timeLeft = 300;
+let started = false;
+let interval = null;
+let currentPassage = paragraph5;
+
+function setPassage(){
+
+const val = document.getElementById("duration").value;
+
+if(val=="120"){
+currentPassage = paragraph2;
+}
+
+else if(val=="420"){
+currentPassage = paragraph7;
+}
+
+else{
+currentPassage = paragraph5;
+}
+
+passageBox.innerText = currentPassage;
+}
+
+function changeDuration(){
+
+if(started) return;
+
+totalTime = Number(document.getElementById("duration").value);
+
+timeLeft = totalTime;
+
+setPassage();
+
+updateTimer();
+}
+
+function updateTimer(){
+
+const m = Math.floor(timeLeft/60);
+
+const s = timeLeft%60;
+
+timerBox.innerText =
+String(m).padStart(2,"0")
++
+":"
++
+String(s).padStart(2,"0");
+}
+
+function startTest(){
+
+if(started) return;
+
+started = true;
+
+totalTime = Number(document.getElementById("duration").value);
+
+timeLeft = totalTime;
+
+interval = setInterval(function(){
+
+timeLeft--;
+
+updateTimer();
+
+if(timeLeft<=0){
+submitTest();
+}
+
+},1000);
+}
+
+function submitTest(){
+
+if(interval){
+clearInterval(interval);
+}
+
+const typed = typingBox.value.trim();
+
+const original = currentPassage;
+
+let errors = 0;
+
+let correct = 0;
+
+for(let i=0;i<typed.length;i++){
+
+if(typed[i]===original[i]){
+correct++;
+}
+
+else{
+errors++;
+}
+
+}
+
+const words =
+typed
+?
+typed.split(/\s+/).length
+:
+0;
+
+const usedSeconds =
+Math.max(totalTime-timeLeft,1);
+
+const minutesUsed =
+usedSeconds/60;
+
+const gross =
+Math.round(words/minutesUsed);
+
+const net =
+Math.max(
+0,
+Math.round(
+(words-errors/5)/minutesUsed
+)
+);
+
+const acc =
+typed.length
+?
+Math.round(
+(correct/typed.length)*100
+)
+:
+0;
+
+document.getElementById("grossWpm").innerText =
+gross + " WPM";
+
+document.getElementById("netWpm").innerText =
+net + " WPM";
+
+document.getElementById("accuracy").innerText =
+acc + "%";
+
+document.getElementById("errors").innerText =
+errors;
+
+document.getElementById("words").innerText =
+words;
+
+document.getElementById("timeUsed").innerText =
+Math.round(minutesUsed*10)/10 + " Min";
+
+document.getElementById("testScreen").style.display =
+"none";
+
+document.getElementById("resultScreen").style.display =
+"block";
+}
+
+setPassage();
+
+updateTimer();
+
+</script>
+
+</body>
+</html>
